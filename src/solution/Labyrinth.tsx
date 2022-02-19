@@ -9,24 +9,28 @@ const Solution = () => {
   const movesRef = useRef(11);
   const [movesLeft, setMovesLeft] = useState(11);
 
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-
   const isLeftGray = (leftPosition: number, topPosition: number) => {
-    return (leftPosition === 2 && topPosition === 1) || (leftPosition === 2 && topPosition === 2) || (leftPosition === 2 && topPosition === 4);;
-  }
+    return (leftPosition === 2 && topPosition === 1) || (leftPosition === 2 && topPosition === 2) || (leftPosition === 2 && topPosition === 4);
+  };
 
   const isTopGray = (leftPosition: number, topPosition: number) => {
     return (leftPosition === 0 && topPosition === 3) || (leftPosition === 1 && topPosition === 3) || (leftPosition === 3 && topPosition === 4);
-  }
+  };
 
   const isRightGray = (leftPosition: number, topPosition: number) => {
     return (leftPosition === 2 && topPosition === 1) || (leftPosition === 2 && topPosition === 2) || (leftPosition === 2 && topPosition === 3);
-  }
+  };
 
   const isBottomGray = (leftPosition: number, topPosition: number) => {
-    return (leftPosition === 0 && topPosition === 0) || (leftPosition === 1 && topPosition === 0) || (leftPosition === 3 && topPosition === 0) || 
-           (leftPosition === 4 && topPosition === 0) || (leftPosition === 0 && topPosition === 3) || (leftPosition === 1 && topPosition === 3);
-  }
+    return (
+      (leftPosition === 0 && topPosition === 0) ||
+      (leftPosition === 1 && topPosition === 0) ||
+      (leftPosition === 3 && topPosition === 0) ||
+      (leftPosition === 4 && topPosition === 0) ||
+      (leftPosition === 0 && topPosition === 3) ||
+      (leftPosition === 1 && topPosition === 3)
+    );
+  };
 
   const handleKeyDown = (event: any) => {
     if ((!(leftRef.current === 4 && topRef.current === 4) || movesLeft === 0) && movesRef.current !== 0) {
@@ -95,26 +99,26 @@ const Solution = () => {
       <div></div>
       <div></div>
 
-      <div className='gray'></div>
-      <div className='gray'></div>
+      <div className="gray"></div>
+      <div className="gray"></div>
       <div></div>
-      <div className='gray'></div>
-      <div className='gray'></div>
+      <div className="gray"></div>
+      <div className="gray"></div>
 
-      <div className='gray'></div>
-      <div className='gray'></div>
+      <div className="gray"></div>
+      <div className="gray"></div>
       <div></div>
-      <div className='gray'></div>
-      <div className='gray'></div>
+      <div className="gray"></div>
+      <div className="gray"></div>
 
       <div></div>
       <div></div>
       <div></div>
-      <div className='gray'></div>
-      <div className='gray'></div>
+      <div className="gray"></div>
+      <div className="gray"></div>
 
-      <div className='gray'></div>
-      <div className='gray'></div>
+      <div className="gray"></div>
+      <div className="gray"></div>
       <div></div>
       <div></div>
       <div className="last"></div>
